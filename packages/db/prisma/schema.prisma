@@ -1,0 +1,40 @@
+
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Users {
+  id String @id @default(uuid())
+  userName String
+  password String
+  photo String?
+  createtAt DateTime @default(now())
+  grops Grop[]
+  messages message[] 
+}
+
+model Grop {
+  id Int @id @default(autoincrement())
+  slug String @unique
+  createtAt DateTime @default(now())
+  adminId String 
+  admin Users @relation(fields: [adminId],references: [id])
+  messages message[]
+}
+
+model message {
+  id Int @id @default(autoincrement())
+  message String
+  userId String
+  groupId Int
+  createdAt DateTime @default(now())
+  user Users @relation(fields: [userId],references: [id])
+  groups Grop @relation(fields: [groupId],references: [id])
+}
