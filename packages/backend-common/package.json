@@ -5,9 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "exports":{
-    "./config":"./src/index.ts"
-  },
+"exports": {
+  "./status": "./src/status.ts"
+},
   "devDependencies": {
     "@repo/typescript-config":"workspace:*"
   },
