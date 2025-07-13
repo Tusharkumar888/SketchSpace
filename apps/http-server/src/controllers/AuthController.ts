@@ -4,7 +4,6 @@ import { Request, Response } from 'express';
 var jwt = require('jsonwebtoken');
 
 const JWTSECRET ="34f772d49767cf290f2301b8e9bc14dee872a2114c187461c620d57f141c1615"//store it in env file
-
 enum statusCode {
     OK = 200,
     CREATED = 201,
@@ -52,7 +51,7 @@ export const signup = async (req: Request, res: Response) => {
       message: "unable to create user",
     });
   }
-  var token = jwt.sign({username: parseUser.data.email}, JWTSECRET);
+  var token = jwt.sign({email: parseUser.data.email}, JWTSECRET);
 
   res.status(statusCode.CREATED).json({
     message: "user created sucessfully " + token
@@ -82,7 +81,7 @@ export const signin = async (req: Request, res: Response) => {
     });
   }
 
-    var token = jwt.sign({username: parseUser.data.email}, JWTSECRET);
+    var token = jwt.sign({email: parseUser.data.email}, JWTSECRET);
 
   res.status(statusCode.CREATED).json({
     message: "log in sucessfully " + token
