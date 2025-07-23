@@ -14,8 +14,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "dotenv": "^16.5.0"
-  }
+  "description": ""
 }

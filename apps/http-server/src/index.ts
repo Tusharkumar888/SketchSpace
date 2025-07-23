@@ -1,6 +1,8 @@
 const express = require('express')
+import dotenv from "dotenv";
+dotenv.config();
 const app = express()
-const port = 3000
+const port = process.env.PORT
 app.use(express.json())
 const authRoutes = require('./routes/authRoutes')
 app.use('/v1/auth',authRoutes)
@@ -8,5 +10,5 @@ app.use('/v1/auth',authRoutes)
 
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`http-server is running`)
 })

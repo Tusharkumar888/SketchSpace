@@ -1,13 +1,14 @@
 import {Request,Response,NextFunction} from 'express';
 var jwt = require('jsonwebtoken');
+import dotenv from 'dotenv';
+dotenv.config();
+const JWTSECRET = process.env.JWTSECRET
 
-const JWTSECRET ="34f772d49767cf290f2301b8e9bc14dee872a2114c187461c620d57f141c1615"
-
- export const authMiddleWare = (req:Request,res:Response,next:NextFunction)=>{
+export const authMiddleWare = (req:Request,res:Response,next:NextFunction)=>{
 const authHeader = req.headers.authorization
 if(!authHeader){
     return res.json({
-       mess:"require token"
+       mess:"please sign in"
     })
 }
 const token = authHeader?.split(" ")?.[1]

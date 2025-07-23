@@ -19,3 +19,10 @@ export const CreateGroupShema = z.object({
    slug: z.string().min(3).max(20),
    adminId:z.string()
 })
+
+
+export const CreateMessageShema = z.object({
+  message: z.string().min(1),
+  userId: z.string(),
+  groupId: z.int()
+})
