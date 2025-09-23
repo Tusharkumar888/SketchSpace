@@ -11,7 +11,6 @@ dotenv.config();
 const JWTSECRET = process.env.JWTSECRET;
 var jwt = require("jsonwebtoken");
 
-
 enum statusCode {
   OK = 200,
   CREATED = 201,
@@ -23,8 +22,6 @@ enum statusCode {
   INTERNAL_SERVER_ERROR = 500,
   SERVICE_UNAVAILABLE = 503,
 }
-
-
 
 //singup and create jwt token
 export const signup = async (req: Request, res: Response) => {
@@ -70,8 +67,6 @@ export const signup = async (req: Request, res: Response) => {
   });
 };
 
-
-
 //signin and create jwt token
 export const signin = async (req: Request, res: Response) => {
   const parseUser = VerifyUserShema.safeParse(req.body);
@@ -101,8 +96,6 @@ export const signin = async (req: Request, res: Response) => {
     message: "log in sucessfully " + token,
   });
 };
-
-
 
 //ceating a group
 export const createGroup = async (req: Request, res: Response) => {
@@ -151,14 +144,13 @@ export const createGroup = async (req: Request, res: Response) => {
   return res.status(statusCode.CREATED).json({ mess: "group created sucess" });
 };
 
-
 //sending message to the group
 export const createMessage = async (req: Request, res: Response) => {
   const parseMessage = CreateMessageShema.safeParse(req.body);
 
   if (!parseMessage.success) {
     return res.status(statusCode.BAD_REQUEST).json({
-      mess:"invalid cradantials "
+      mess: "invalid cradantials ",
     });
   }
 
@@ -184,11 +176,10 @@ export const createMessage = async (req: Request, res: Response) => {
 
     const createdMessage = await client.message.create({
       data: {
-
-        message:parseMessage.data.message,
+        message: parseMessage.data.message,
         userId: parseMessage.data.userId,
         groupId: parseMessage.data.groupId,
-      }
+      },
     });
 
     if (!createdMessage.id) {
