@@ -5,11 +5,8 @@ import {
   Home,
   FileText,
   HelpCircle,
-  Sun,
-  Moon,
   Github,
   Star,
-  Menu,
 } from 'lucide-react';
 
 
@@ -17,7 +14,6 @@ export function Header() {
   return (
     <header className="fixed pl-2 pr-2 top-0 left-0 right-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
-        {/* Left side - Logo and sidebar toggle */}
         <div className="flex items-center gap-4">
          
           {/* Logo */}
@@ -44,12 +40,12 @@ export function Header() {
         <div className="flex items-center gap-4">
           {/* Dark mode toggle */}
           <div className="flex items-center gap-2">
-            <Sun className="h-4 w-4" />
+
             <Switch
             
               aria-label="Toggle dark mode"
             />
-            <Moon className="h-4 w-4" />
+
           </div>
 
           {/* Action buttons */}
