@@ -30,10 +30,12 @@ export function Header() {
             <FileText className="h-4 w-4" />
             Examples
           </Button>
+          <a href="https://github.com/Tusharkumar888/SketchSpace" target='_blank'>
           <Button variant="ghost" size="sm" className="gap-2">
             <HelpCircle className="h-4 w-4" />
             Documentation
           </Button>
+          </a>
         </nav>
 
         {/* Right side actions */}
@@ -50,13 +52,16 @@ export function Header() {
 
           {/* Action buttons */}
           <div className="flex items-center gap-2">
+            <a href="https://github.com/Tusharkumar888/" target='_blank'>
+
             <Button variant="ghost" size="sm" className="gap-2">
               <Github className="h-4 w-4" />
               <span className="hidden sm:inline">GitHub</span>
             </Button>
+            </a>
             <Button size="sm" className="gap-2">
               <Star className="h-4 w-4" />
-              Try Demo
+              Login
             </Button>
           </div>
         </div>

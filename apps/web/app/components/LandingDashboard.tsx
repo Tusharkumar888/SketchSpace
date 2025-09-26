@@ -94,7 +94,7 @@ export function LandingDashboard() {
           <div className="space-y-4">
             <Badge variant="secondary" className="px-4 py-2">
               <Star className="h-3 w-3 mr-1" />
-              #1 Web-based Sketching Tool
+               Web-based Sketching Tool
             </Badge>
             <h1 className="max-w-4xl mx-auto">
               Create, Collaborate, and Share Your Ideas with SketchPad
@@ -321,7 +321,7 @@ export function LandingDashboard() {
         </section>
 
         {/* Stats Section */}
-        <section className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <section className="grid grid-cols-2 md:grid-cols-4 gap-6 px-4">
           {stats.map((stat, index) => (
             <Card key={index} className="text-center">
               <CardContent className="pt-6">
@@ -336,7 +336,7 @@ export function LandingDashboard() {
         </section>
 
         {/* Features Grid */}
-        <section className="space-y-8">
+        <section className="space-y-8 px-4">
           <div className="text-center space-y-4">
             <h2>Why Choose SketchPad?</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -364,7 +364,7 @@ export function LandingDashboard() {
         </section>
 
         {/* Tools Showcase */}
-        <section className="space-y-8">
+        <section className="space-y-8 px-4">
           <div className="text-center space-y-4">
             <h2>Professional Tools at Your Fingertips</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -388,7 +388,7 @@ export function LandingDashboard() {
         </section>
 
         {/* Collaboration Section */}
-        <section className="grid md:grid-cols-2 gap-12 items-center">
+        <section className="grid md:grid-cols-2 gap-12 items-center px-4">
           <div className="space-y-6">
             <div className="space-y-4">
               <Badge variant="outline">Collaboration</Badge>
@@ -433,7 +433,7 @@ export function LandingDashboard() {
         </section>
 
         {/* Platform Compatibility */}
-        <section className="space-y-8">
+        <section className="space-y-8 px-4">
           <div className="text-center space-y-4">
             <h2>Works Everywhere</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -475,7 +475,7 @@ export function LandingDashboard() {
         </section>
 
         {/* Community & Support */}
-        <section className="bg-accent/50 rounded-xl p-8 text-center space-y-6">
+        <section className="bg-accent/50 rounded-xl p-8 text-center space-y-6 ">
           <div className="space-y-4">
             <h2>Join Our Creative Community</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -507,7 +507,7 @@ export function LandingDashboard() {
         </section>
 
         {/* CTA Section */}
-        <section className="text-center space-y-6 py-12">
+        <section className="text-center space-y-6 py-12 ">
           <div className="space-y-4">
             <h2>Ready to Start Creating?</h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
